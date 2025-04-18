@@ -2,7 +2,12 @@ import React from 'react'
 
 const ObjectDetection = () => {
   return (
-    <div>ObjectDetection</div>
+    <div className='mt-8'>
+        <div>
+            {/* Webcam */}
+            {/* Canvas */}
+        </div>
+    </div>
   )
 }
 
