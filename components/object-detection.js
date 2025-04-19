@@ -3,12 +3,18 @@ import React, { useEffect, useRef, useState } from 'react'
 import Webcam from 'react-webcam';
 import {load as cocoSSDLoad} from '@tensorflow-models/coco-ssd';
 
+const detectInterval;
+
 const ObjectDetection = () => {
     const [isLoading, setIsLoading] = useState(true);
     const webcamRef = useRef(null);
 
     const runCoco = async () => {
-        const net = await cocossdload();
+        setIsLoading(true);
+        const net = await cocoSSDLoad();
+        setIsLoading(false);
+
+        detectInterval = setInterval(() =>{},10);
     };
 
     const showmyVideo = () =>{
