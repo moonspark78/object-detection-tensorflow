@@ -1,3 +1,4 @@
+"use client";
 import ObjectDetection from "@/components/object-detection";
 
 export default function Home() {
