@@ -1,9 +1,15 @@
 "use client"
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Webcam from 'react-webcam';
+import {load as cocoSSDLoad} from '@tensorflow-models/coco-ssd';
 
 const ObjectDetection = () => {
+    const [isLoading, setIsLoading] = useState(true);
     const webcamRef = useRef(null);
+
+    const runCoco = async () => {
+        const net = await cocossdload();
+    };
 
     const showmyVideo = () =>{
         if(webcamRef.current !== null && webcamRef.current.video?.readyState === 4){
